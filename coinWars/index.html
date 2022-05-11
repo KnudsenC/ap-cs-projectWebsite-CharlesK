@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Coin Wars Map</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  </br>
+  </br>
+  </br>
+  <button id="start" onclick="start()">Start!</button>
+  <button id="mapSelect" onclick="mapSelect()">Map Select!</button>
+  <div id="coinBar">
+    <img class="coin" id="coin" src="img/coin.png" draggable="true" ondragstart="drag(event)" onclick="conflict(event)">
+    <div id="redCounter" class="counter" onclick="redPopup()">0<span class="popuptext" id="redPopup">This number displays how many coins the RED player SHOULD have.</span></div>
+    <div id="redCoinCounter" class="counter" onclick="redCoinPopup()">0<span class="popuptext" id="redCoinPopup">This number displays how many coins the RED player DOES have.</span></div>
+    
+    <div id="blueCounter" class="counter" onclick="bluePopup()">0<span class="popuptext" id="bluePopup">This number displays how many coins the BLUE player SHOULD have.</span></div>
+    <div id="blueCoinCounter" class="counter" onclick="blueCoinPopup()">0<span class="popuptext" id="blueCoinPopup">This number displays how many coins the BLUE player DOES have.</span></div>
+  </div>
+  <div id="colorMenu">
+    <div class="tileColor" id="white" onclick="w()"></div>
+    <div class="tileFiller"></div>
+    <div class="tileColor" id="red" onclick="r()"></div>
+    <div class="tileFiller"></div>
+    <div class="tileColor" id="blue" onclick="b()"></div>
+    <div class="tileFiller"></div>
+  </div>
+
+  </br>
+  
+  <div id="map" ondragover="allowDrop(event)" ondrop = "drop(event)"> </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
